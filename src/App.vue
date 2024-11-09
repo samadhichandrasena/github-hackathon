@@ -252,7 +252,7 @@
       <v-row justify="center" no-gutters>
         <v-col class="text-center" cols="12">
           <span class="text-caption">
-            © {{ new Date().getFullYear() }} Medical X-ray Analysis System. For professional use only.
+            © {{ new Date().getFullYear() }} Bach, Sora, Samadhi. For professional use only.
           </span>
         </v-col>
       </v-row>
@@ -288,32 +288,11 @@ export default {
           description: 'Developed and validated with leading healthcare institutions'
         }
       ],
-      uploadRules: [
-        value => !value || value.size < 10000000 || 'Image size should be less than 10 MB!',
-        value => !value || value.type.startsWith('image/') || 'Please upload an image file!'
-      ]
+     
     }
   },
 
   methods: {
-    onFileChange(file) {
-      if (file) {
-        this.errorMessage = null;
-        this.prediction = null;
-        
-        if (!file.type.startsWith('image/')) {
-          this.errorMessage = 'Please upload a valid image file';
-          this.selectedFile = null;
-          return;
-        }
-
-        this.imageUrl = URL.createObjectURL(file);
-      } else {
-        this.imageUrl = null;
-        this.prediction = null;
-      }
-    },
-
     async submitImage() {
       if (!this.selectedFile) return;
 
@@ -325,7 +304,7 @@ export default {
         this.prediction = [
           { condition: "Pneumonia", probability: 0.82 },
           { condition: "Cardiomegaly", probability: 0.15 },
-          { condition: "Pleural Effusion", probability: 0.03 }
+          { condition: "Emphysema", probability: 0.03 }
         ];
         this.isLoading = false;
       }, 2000);
