@@ -26,7 +26,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/). -->
 
 # HOW TO RUN my-vue-project
 
-1. Install Node.js and npm
+## 1. Install Node.js and npm
 
 Vue.js projects rely on Node.js and npm (Node Package Manager) to manage dependencies. Here’s how you can install it:
 
@@ -43,7 +43,7 @@ node -v
 npm -v
 This will display the versions of Node.js and npm if they're installed correctly.
 
-2. Clone the Repository
+## 2. Clone the Repository
 You need to clone the repository to your local machine. Here’s how:
 
 Open the terminal and run:
@@ -58,7 +58,7 @@ bash
 Copy code
 cd my-vue-project
 
-3. Install Project Dependencies
+## 3. Install Project Dependencies
 In the project folder, you need to install all the dependencies (like Vue.js, Vuetify, etc.) listed in the package.json file.
 
 Run the following command to install the dependencies:
@@ -68,7 +68,7 @@ Copy code
 npm install
 This will download all the necessary packages.
 
-4. Run the Project
+## 4. Run the Project
 After the dependencies are installed, you can start the Vue development server to run the project locally:
 
 Run this command:
